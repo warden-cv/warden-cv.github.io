@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Warden is a dark, security-conscious web console for Linux servers.">
+  <meta name="theme-color" content="#111213">
+  <title>Warden</title>
+  <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="./"><span>W</span><strong>Warden</strong></a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="./docs.html">Docs</a>
+    <a href="https://github.com/warden-cv/warden">GitHub</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle aria-label="Open navigation"><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden><a href="./docs.html">Docs</a><a href="https://github.com/warden-cv/warden">GitHub</a></div>
+<main id="main-content" tabindex="-1"><main class="redirect-page" data-local-launcher data-product="warden" data-default-port="7332">
+                                        <section class="redirect-card" aria-labelledby="redirect-title">
+                                          <p class="eyebrow">MY WARDEN</p>
+                                          <h1 id="redirect-title">Open your local Warden.</h1>
+                                          <p class="redirect-lede">This page remembers the local port used by Warden in this browser and opens your local installation.</p>
+                                          <div class="redirect-error" data-redirect-error role="alert" hidden></div>
+                                          <form class="redirect-form" data-redirect-form novalidate>
+                                            <label for="warden-local-port">Local Warden port</label>
+                                            <div class="redirect-port-row">
+                                              <span>http://localhost:</span>
+                                              <input id="warden-local-port" name="port" type="number" min="1" max="65535" step="1" inputmode="numeric" autocomplete="off" value="7332" aria-describedby="redirect-port-help">
+                                            </div>
+                                            <p id="redirect-port-help" class="redirect-help">Use the port configured for your local Warden service. The default is <code>7332</code>.</p>
+                                            <div class="redirect-actions">
+                                              <button class="primary" type="submit">Save and open Warden</button>
+                                              <button class="secondary" type="button" data-reset-port>Use default port</button>
+                                            </div>
+                                          </form>
+                                          <p class="redirect-status" data-redirect-status>Preparing Warden…</p>
+                                          <p class="redirect-note">Your port preference is stored only in this browser. No Warden configuration or credentials are sent to warden.cv.</p>
+                                        </section>
+                                      </main></main>
+<footer class="site-footer">
+  <div><strong>Warden</strong><span>Linux server control without pretending the terminal is harmless.</span></div>
+  <div><a href="./docs.html">Documentation</a><a href="https://github.com/warden-cv/warden">Source</a></div>
+</footer>
+<script src="/assets/js/script.js"></script>
+</body>
+</html>
