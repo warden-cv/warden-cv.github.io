@@ -142,6 +142,11 @@
       "title": "update",
       "content-ext": ".sh",
       "output-ext": ".sh"
+    },
+    {
+      "name": "redirect",
+      "title": "redirect",
+      "template": "templates/template.html"
     }
   ]
 }

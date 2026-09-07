@@ -1,0 +1,22 @@
+<main class="redirect-page" data-local-launcher data-product="warden" data-default-port="7332">
+  <section class="redirect-card" aria-labelledby="redirect-title">
+    <p class="eyebrow">MY WARDEN</p>
+    <h1 id="redirect-title">Open your local Warden.</h1>
+    <p class="redirect-lede">This page remembers the local port used by Warden in this browser and opens your local installation.</p>
+    <div class="redirect-error" data-redirect-error role="alert" hidden></div>
+    <form class="redirect-form" data-redirect-form novalidate>
+      <label for="warden-local-port">Local Warden port</label>
+      <div class="redirect-port-row">
+        <span>http://localhost:</span>
+        <input id="warden-local-port" name="port" type="number" min="1" max="65535" step="1" inputmode="numeric" autocomplete="off" value="7332" aria-describedby="redirect-port-help">
+      </div>
+      <p id="redirect-port-help" class="redirect-help">Use the port configured for your local Warden service. The default is <code>7332</code>.</p>
+      <div class="redirect-actions">
+        <button class="primary" type="submit">Save and open Warden</button>
+        <button class="secondary" type="button" data-reset-port>Use default port</button>
+      </div>
+    </form>
+    <p class="redirect-status" data-redirect-status>Preparing Warden…</p>
+    <p class="redirect-note">Your port preference is stored only in this browser. No Warden configuration or credentials are sent to warden.cv.</p>
+  </section>
+</main>
