@@ -11,6 +11,11 @@
       "template": "templates/template.html"
     },
     {
+      "name": "docs/convenient-access",
+      "title": "Convenient access",
+      "template": "templates/template.html"
+    },
+    {
       "name": "docs/editor",
       "title": "Editor",
       "template": "templates/template.html"
