@@ -4,7 +4,7 @@ const nav = fs.readFileSync('templates/docs-nav.html', 'utf8');
 const script = fs.readFileSync('public/assets/js/script.js', 'utf8');
 const style = fs.readFileSync('public/assets/css/style.css', 'utf8');
 const groups = [...nav.matchAll(/class="docs-nav-group"/g)];
-const routes = [...nav.matchAll(/@pathto\('([^']+)'\)/g)].map(match => match[1]);
+const routes = [...nav.matchAll(/@path\('([^']+)'\)/g)].map(match => match[1]);
 const expected = fs.readdirSync('content/docs')
   .filter(name => name.endsWith('.html'))
   .map(name => `docs/${name.slice(0, -5)}`);

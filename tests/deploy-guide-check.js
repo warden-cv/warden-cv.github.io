@@ -22,7 +22,7 @@ for (const sub of ['cortex.company.com', 'warden.company.com', 'trestle.company.
   if (!source.includes(sub)) throw new Error(`ecosystem map must name ${sub}`);
 }
 if (source.includes('proxy_set_header Upgrade') === false) throw new Error('WebSocket upgrade headers must be documented for Warden terminals');
-for (const leftover of ['@pathto', '@input', '@include']) {
+for (const leftover of ['@path', '@input', '@include']) {
   if (generated && generated.includes(leftover)) throw new Error(`generated output contains unresolved ${leftover}`);
 }
 if (generated && !generated.includes(hostname)) throw new Error('generated deploy page is stale');

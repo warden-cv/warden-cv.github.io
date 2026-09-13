@@ -1,0 +1,5 @@
+<div class="docs-layout shell">@input("templates/docs-nav.html")<article class="docs-content"><p class="eyebrow">Documentation · Operations</p><h1>Command-line administration</h1><p>Warden supports headless first-run provisioning, machine-readable configuration inspection and confirmed recovery commands.</p><pre><code>warden setup --username admin --display-name Administrator --password-file /run/secrets/warden-password
+warden config show --json
+warden service status
+warden reset --auth --confirm "WARDEN AUTH"
+warden reset --all --confirm "WARDEN ALL"</code></pre><p>Stop Warden before a reset. Authentication reset preserves project configuration; full reset preserves the filesystem workspace configured as Warden's file root. Timestamped backups are retained. Omit <code>--confirm</code> to type the phrase interactively.</p><p>Use flags, environment variables and the documented HTTP API for repeatable configuration-management workflows; never place passwords directly in command arguments.</p></article></div>
