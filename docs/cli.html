@@ -1,4 +1,63 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Command-line administration · Warden</title><link rel="stylesheet" href="../assets/css/style.css"></head><body><main class="docs-layout shell"><article class="docs-content"><p class="eyebrow">Documentation · Operations</p><h1>Command-line administration</h1><pre><code>warden setup --password-file /run/secrets/warden-password
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Warden is a dark, security-conscious web console for Linux servers.">
+  <meta name="theme-color" content="#111213">
+  <title>Warden</title>
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <a class="brand" href="../"><span>W</span><strong>Warden</strong></a>
+  <nav class="site-nav" aria-label="Primary">
+    <a href="../docs.html">Docs</a>
+    <a href="https://gantry.cv">Gantry</a>
+    <a href="https://github.com/warden-cv/warden">GitHub</a>
+  </nav>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle aria-label="Open navigation"><span></span><span></span></button>
+</header>
+<div class="mobile-menu" id="mobile-menu" data-mobile-menu hidden><a href="../docs.html">Docs</a><a href="https://gantry.cv">Gantry</a><a href="https://github.com/warden-cv/warden">GitHub</a></div>
+<main id="main-content" tabindex="-1"><div class="docs-layout shell"><button class="docs-menu-toggle" type="button" aria-expanded="false" aria-controls="docs-mobile-nav" data-docs-menu-toggle aria-label="Open documentation menu"><span></span><span></span></button>
+                                                                     <aside class="docs-nav">
+                                                                       <p>Warden docs</p>
+                                                                       <div class="docs-nav-group" data-docs-group>
+                                                                         <button class="docs-nav-toggle" type="button" aria-expanded="false"><span>Start</span><i aria-hidden="true"></i></button>
+                                                                         <div class="docs-nav-links" hidden><a href="../docs.html">Overview</a><a href="./installing.html">Installing</a><a href="./configuration.html">Configuration</a><a href="./convenient-access.html">Convenient access</a></div>
+                                                                       </div>
+                                                                       <div class="docs-nav-group" data-docs-group>
+                                                                         <button class="docs-nav-toggle" type="button" aria-expanded="false"><span>Workspace</span><i aria-hidden="true"></i></button>
+                                                                         <div class="docs-nav-links" hidden><a href="./editor.html">Editor</a><a href="./source-control.html">Source control</a><a href="./explorer.html">Explorer</a><a href="./terminal.html">Terminal</a></div>
+                                                                       </div>
+                                                                       <div class="docs-nav-group" data-docs-group>
+                                                                         <button class="docs-nav-toggle" type="button" aria-expanded="false"><span>Operations</span><i aria-hidden="true"></i></button>
+                                                                         <div class="docs-nav-links" hidden><a href="./cli.html">CLI administration</a><a href="./monitor.html">Monitor</a><a href="./alerts.html">Alerts & rules</a><a href="./websites.html">Websites</a><a href="./system.html">System</a><a href="./persistence.html">SQLite & durability</a></div>
+                                                                       </div>
+                                                                       <div class="docs-nav-group" data-docs-group>
+                                                                         <button class="docs-nav-toggle" type="button" aria-expanded="false"><span>Identity</span><i aria-hidden="true"></i></button>
+                                                                         <div class="docs-nav-links" hidden><a href="./authentication.html">Authentication</a><a href="./accounts.html">Accounts</a><a href="./access-control.html">Access control</a><a href="./audit.html">Audit & sessions</a></div>
+                                                                       </div>
+                                                                       <div class="docs-nav-group" data-docs-group>
+                                                                         <button class="docs-nav-toggle" type="button" aria-expanded="false"><span>AI</span><i aria-hidden="true"></i></button>
+                                                                         <div class="docs-nav-links" hidden><a href="./ai.html">AI providers</a><a href="./agent.html">Coding agent</a></div>
+                                                                       </div>
+                                                                       <div class="docs-nav-group" data-docs-group>
+                                                                         <button class="docs-nav-toggle" type="button" aria-expanded="false"><span>Security & deployment</span><i aria-hidden="true"></i></button>
+                                                                         <div class="docs-nav-links" hidden><a href="./security.html">Security</a><a href="./service.html">Systemd service</a><a href="./deploy.html">Subdomain deployment</a><a href="./battle-tested.html">Battle Tested</a><a href="./https-caddy.html">HTTPS with Caddy</a><a href="./https-nginx.html">HTTPS with nginx</a></div>
+                                                                       </div>
+                                                                     </aside>
+                                                                     <div class="docs-mobile-nav" id="docs-mobile-nav" data-docs-mobile-nav hidden></div><article class="docs-content"><p class="eyebrow">Documentation · Operations</p><h1>Command-line administration</h1><p>Warden supports headless first-run provisioning, machine-readable configuration inspection and confirmed recovery commands.</p><pre><code>warden setup --username admin --display-name Administrator --password-file /run/secrets/warden-password
 warden config show --json
+warden service status
 warden reset --auth --confirm "WARDEN AUTH"
-warden reset --all --confirm "WARDEN ALL"</code></pre><p>Stop Warden before resetting. Backups are retained, and the configured workspace root is preserved.</p><p><a href="../docs.html">Back to documentation</a> · <a href="https://gantry.cv">Gantry</a></p></article></main></body></html>
+warden reset --all --confirm "WARDEN ALL"</code></pre><p>Stop Warden before a reset. Authentication reset preserves project configuration; full reset preserves the filesystem workspace configured as Warden's file root. Timestamped backups are retained. Omit <code>--confirm</code> to type the phrase interactively.</p><p>Use flags, environment variables and the documented HTTP API for repeatable configuration-management workflows; never place passwords directly in command arguments.</p></article></div></main>
+<footer class="site-footer">
+  <div><strong>Warden</strong><span>Linux server control without pretending the terminal is harmless.</span></div>
+  <div><a href="../docs.html">Documentation</a><a href="https://github.com/warden-cv/warden">Source</a></div>
+</footer>
+<script src="../assets/js/script.js"></script>
+</body>
+</html>
