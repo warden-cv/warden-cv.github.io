@@ -11,13 +11,18 @@
   "pagination-template": "",
   "pagination-separator": "",
   "pagination-pages": 0,
+  "project-fingerprint": "",
+  "hierarchy-fingerprint": "",
   "dependencies": [
     "content/index.html",
     "templates/head.html",
     "templates/template.html"
   ],
   "reqs": [
+    "public/assets/css/style.css",
+    "public/assets/images/favicon.svg",
     "public/assets/images/warden-terminal.png",
+    "public/assets/js/script.js",
     "public/docs.html",
     "public/docs/installing.html",
     "public/docs/security.html",
